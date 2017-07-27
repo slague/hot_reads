@@ -12,10 +12,9 @@ class Api::V1::HotReadsController < ApplicationController
 
       render status: 201, json: HotRead.all
     else
-      # hot_read.update(read_count +1)
       @hot_read.save
 
-      render status: 201, json HotRead.all
+      render status: 201, json: HotRead.all
       # a hot_read should begin with read_count 1
     end
   end
