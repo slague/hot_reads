@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170727171728) do
+ActiveRecord::Schema.define(version: 20170727180627) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "hot_reads", force: :cascade do |t|
     t.string   "url"
-    t.integer  "read_count"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "read_count", default: 1
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
 end
