@@ -1,1 +1,11 @@
-This is the hot reads index page. 
+<div class="title">
+  <h1>HOT Reads!</h1>
+</div>
+
+<div class="hot-reads-list">
+  <% @hot_reads.each do |read| %>
+  <div id="<%=read.url%>">
+    <h4><%= read.url %><h4><br>
+    </div>
+  <% end %>
+</div>
