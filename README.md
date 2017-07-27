@@ -1,24 +1,29 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app is a service designed to consume data from the URLockbox app. "Hot Reads" keeps track of all links that have been marked read on URLockbox across all users within the past 24 hours, and lists the top ten "hot reads".
 
-Things you may want to cover:
+## Tech Stack
+Rails version 5.0.0.1
 
-* Ruby version
+## Setup
+ Clone the repo
+ Run `bundle`
+ `rake db:create`
+ `rake db:migrate`
+ To run locally run `rails s` and open browser to localhost:3000
 
-* System dependencies
+To view the app in production:
+ [Production Link](https://m4-hot-reads.herokuapp.com/)
 
-* Configuration
+### Testing
 
-* Database creation
+This app uses Rspec for testing. To run tests `rspec`
 
-* Database initialization
+## API
 
-* How to run the test suite
+This app has one endpoint `POST '/api/v1/hot_reads` which checks to see if a link is already stored as a hot read. If so, its count is increased by one. If not, it creates a new record. Only the "hot reads" within the past 24 hours are displayed.
 
-* Services (job queues, cache servers, search engines, etc.)
+## URLockbox
 
-* Deployment instructions
-
-* ...
+[GitHub Repo](https://github.com/slague/m4-final-starter)
+[Production](https://mod-4-final-stephanie.herokuapp.com/)
