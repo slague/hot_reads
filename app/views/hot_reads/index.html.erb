@@ -5,7 +5,7 @@
 <div class="hot-reads-list">
   <% @hot_reads.each do |read| %>
   <div id="<%=read.url%>">
-    <h4><%= read.url %><h4><br>
+    <h4><%= read.url %> &nbsp;Count:<%=read.read_count%></h4><br>
     </div>
   <% end %>
 </div>
