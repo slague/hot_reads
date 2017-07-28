@@ -21,7 +21,7 @@ This app uses Rspec for testing. To run tests `rspec`
 
 ## API
 
-This app has one endpoint `POST '/api/v1/hot_reads` which checks to see if a link is already stored as a hot read. If so, its count is increased by one. If not, it creates a new record. Only the "hot reads" within the past 24 hours are displayed.
+This app has two endpoints `GET '/api/v1/hot_reads` and `POST '/api/v1/hot_reads`. The post request checks to see if a link is already stored as a hot read. If so, its count is increased by one. If not, it creates a new record. Only the "hot reads" within the past 24 hours are displayed.
 
 ## URLockbox
 
